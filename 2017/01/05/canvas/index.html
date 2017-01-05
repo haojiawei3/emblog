@@ -7,7 +7,7 @@
 
     
 
-    <title>利用canvas实现画板 | </title>
+    <title>canvas | </title>
     <meta name="author" content="John Doe">
     
     <meta name="description" content="相关介绍
@@ -20,7 +20,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="利用canvas实现画板"/>
+    <meta property="og:title" content="canvas"/>
     <meta property="og:site_name" content="Hexo"/>
 
     
@@ -61,7 +61,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
                     </li>
                 
                     <li>
-                        <a class="menu-archive " href="/hjwblog/archives" >
+                        <a class="menu-archive " href="/emblog/archives" >
                             <i class="fa fa-archive "></i>
                             
                             归档
@@ -77,7 +77,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
                     </li>
                 
                     <li>
-                        <a class="menu-reading " href="/hjwblog/reading" >
+                        <a class="menu-reading " href="/emblog/reading" >
                             <i class="fa fa-book "></i>
                             
                             读书
@@ -85,7 +85,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
                     </li>
                 
                     <li>
-                        <a class="menu-about " href="/hjwblog/about" >
+                        <a class="menu-about " href="/emblog/about" >
                             <i class="fa fa-user "></i>
                             
                             关于
@@ -121,7 +121,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
             </li>
         
             <li class="no-padding">
-                <a class="waves-effect menu-archive " href="/hjwblog/archives" >
+                <a class="waves-effect menu-archive " href="/emblog/archives" >
                     <i class="fa fa-archive "></i>
                     
                     归档
@@ -137,7 +137,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
             </li>
         
             <li class="no-padding">
-                <a class="waves-effect menu-reading " href="/hjwblog/reading" >
+                <a class="waves-effect menu-reading " href="/emblog/reading" >
                     <i class="fa fa-book "></i>
                     
                     读书
@@ -145,7 +145,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
             </li>
         
             <li class="no-padding">
-                <a class="waves-effect menu-about " href="/hjwblog/about" >
+                <a class="waves-effect menu-about " href="/emblog/about" >
                     <i class="fa fa-user "></i>
                     
                     关于
@@ -202,12 +202,12 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
             <div class="article-title">
                 
     
-        <h1>利用canvas实现画板</h1>
+        <h1>canvas</h1>
     
 
 
             </div>
-            <time class="pink-link-context" datetime="2016-03-09T07:20:08.000Z"><a href="/emblog/2016/03/09/Hello/">2016-03-09</a></time>
+            <time class="pink-link-context" datetime="2017-01-05T15:09:42.000Z"><a href="/emblog/2017/01/05/canvas/">2017-01-05</a></time>
 
 
             <span id="busuanzi_container_page_pv" class="read-times-container">
@@ -228,32 +228,33 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
 
 
             <div class="toc pink-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#相关介绍"><span class="section table-of-contents-text">相关介绍</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#相关介绍"><span class="section table-of-contents-text">相关介绍</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#部分源码"><span class="section table-of-contents-text">部分源码</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#demo地址"><span class="section table-of-contents-text">demo地址</span></a></li></ol>
 </div>
 
 
             <div class="entry pink-link-context">
                 <img src="/emblog/img/canvas.png" class="[ddd]" title="[100] [title text [alt text]]">
 <!--top-->
-<p><br></p>
 <h2 id="相关介绍"><a href="#相关介绍" class="headerlink" title="相关介绍"></a><b>相关介绍</b></h2><ul>
 <li><p><code>HTML5 Canvas</code> 还有一个比较实用的应用，那就是网络画板，这样我们就可以在网页上直接进行画图操作。今天要分享的这款HTML5 Canvas画图工具就可以简单实现网络画图的功能，我们可以自定义笔刷的类型、粗细、颜色，也可以定义画布的大小和背景颜色等。我们也可以对这款HTML5画图工具进行扩展，让它的画图功能更加完善。</p>
 </li>
 <li><p>包含有裁剪，橡皮，以及图片处理的功能，高斯模糊集马赛克</p>
 </li>
 <li><p>更多功能还需大牛去继续开发，这只是一个简单demo</p>
-<a id="more"></a>
 </li>
 </ul>
+<a id="more"></a>
+<h2 id="部分源码"><a href="#部分源码" class="headerlink" title="部分源码"></a>部分源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">draw:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       var that=this;</div><div class="line">       this.copy.onmousedown=<span class="keyword">function</span>(e)&#123;</div><div class="line">           var startx= e.offsetX;</div><div class="line">           var starty= e.offsetY;</div><div class="line">           that.copy.onmousemove=<span class="keyword">function</span>(e)&#123;</div><div class="line">               that.isback=<span class="literal">true</span>;</div><div class="line">               that.init();</div><div class="line">               var endx= e.offsetX;</div><div class="line">               var endy= e.offsetY;</div><div class="line">               that.cobj.clearRect(0,0,that.width,that.height);</div><div class="line">               <span class="keyword">if</span>(that.historys.length&gt;0)&#123;</div><div class="line">                   that.cobj.putImageData(that.historys[that.historys.length-1],0,0);</div><div class="line">               &#125;</div><div class="line">               that.cobj.beginPath();</div><div class="line">               that[that.type](startx,starty,endx,endy);</div><div class="line"></div><div class="line">           &#125;</div><div class="line">            line:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   var that=this;</div><div class="line">                   that.cobj.beginPath();</div><div class="line">                   that.cobj.moveTo(x,y);</div><div class="line">                   that.cobj.lineTo(x1,y1);</div><div class="line">                   that.cobj.stroke();</div><div class="line">               &#125;,</div><div class="line">               rect:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   var that=this;</div><div class="line">                   that.cobj.beginPath();</div><div class="line">                   that.cobj.rect(x,y,x1-x,y1-y)</div><div class="line">                   that.cobj[that.style]();</div><div class="line">               &#125;,</div><div class="line">               arc:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   this.cobj.beginPath();</div><div class="line">                   var r=Math.sqrt((x1-x)*(x1-x)+(y1-y)*(y1-y));</div><div class="line">                   this.cobj.arc(x,y,r,0,2*Math.PI);</div><div class="line">                   this.cobj[this.style]();</div><div class="line">               &#125;,</div></pre></td></tr></table></figure>
+<h2 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h2><p><a href="https://haojiawei1.github.io/shopapp/ps/ps.html" target="_blank" rel="external">点击查看</a></p>
 
                 
+
+
 <p class="pink-link-context">
     <a href="/emblog/2016/12/28/hello-world/" rel="next" title="Hello World">
-    上一篇：Hello World
+    下一篇：Hello World
   </a>
 </p>
-
-
 
 
             </div>
@@ -269,7 +270,7 @@ HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样�
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2016/03/09/Hello/" data-title="利用canvas实现画板" data-url="https://haojiawei3.github.io/emblog/emblog/2016/03/09/Hello/"></div>
+                <div class="ds-thread" data-thread-key="2017/01/05/canvas/" data-title="canvas" data-url="https://haojiawei3.github.io/emblog/emblog/2017/01/05/canvas/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
