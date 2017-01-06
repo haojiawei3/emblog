@@ -7,13 +7,18 @@
 
     
 
-    <title>HTML5 | </title>
+    <title>利用css3进行3d旋转 | </title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="相关介绍
+这个banner住要是css3中的3d旋转以及角度的控制
+包含以Y轴.X轴.以及沿中心旋转的效果
+可以用做网站中的banner图像">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="利用css3进行3d旋转"/>
     <meta property="og:site_name" content="Hexo"/>
 
     
@@ -199,36 +204,112 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/emblog/categories/css3/">css3</a>
+
 
         
-            <a class="breadcrumb" href="/tags/HTML5/">HTML5</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>利用css3进行3d旋转</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2017-01-06T02:43:07.000Z"><a href="/emblog/2017/01/06/css3/">2017-01-06</a></time>
+
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/emblog/2017/01/06/house/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-01-06T02:21:23.000Z">2017-01-06</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                利用css3实现的3d房子模型
-            </a>
-        
-            <a href="/emblog/2017/01/05/canvas/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-01-05T15:09:42.000Z">2017-01-05</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                canvas
-            </a>
+            <a href="/emblog/tags/css3/" class="chip pink lighten-1">css3</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#相关介绍"><span class="section table-of-contents-text">相关介绍</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#部分动画函数"><span class="section table-of-contents-text">部分动画函数</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <img src="/emblog/img/3d旋转.png" class="[ddd]" title="[100] [title text [alt text]]">
+<h2 id="相关介绍"><a href="#相关介绍" class="headerlink" title="相关介绍"></a>相关介绍</h2><ul>
+<li>这个<code>banner</code>住要是<code>css3</code>中的3d旋转以及角度的控制</li>
+<li>包含以Y轴.X轴.以及沿中心旋转的效果</li>
+<li>可以用做网站中的banner图像</li>
+</ul>
+<a id="more"></a>
+<h2 id="部分动画函数"><a href="#部分动画函数" class="headerlink" title="部分动画函数"></a>部分动画函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       <span class="keyword">for</span>(var a=0;a&lt;arr.length;a++)&#123;</div><div class="line">           <span class="keyword">if</span>(a&lt;5)&#123;</div><div class="line">               arr[a].style.animation=<span class="string">"one "</span>+a*0.8+<span class="string">"s ease"</span></div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               arr[a].style.animation=<span class="string">"one "</span>+(8<span class="_">-a</span>*0.8)+<span class="string">"s ease"</span></div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;,300);</div><div class="line"></div><div class="line">   //    执行动画</div><div class="line">   var init=0;</div><div class="line">   var t=<span class="built_in">set</span>Interval(move,5000);</div><div class="line">   <span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</div><div class="line">       init+=90;</div><div class="line">       <span class="keyword">for</span>(var i=0; i&lt;arr.length;i++)&#123;</div><div class="line">           arr[i].style.transform=<span class="string">"rotateY("</span>+init+<span class="string">"deg)"</span></div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   $(window).focus(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       t=<span class="built_in">set</span>Interval(move,5000);</div><div class="line">   &#125;);</div><div class="line">   $(window).blur(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       clearInterval(t);</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/emblog/2017/01/06/paoku/" rel="next" title="利用canvas实现跑酷游戏雏形">
+    下一篇：利用canvas实现跑酷游戏雏形
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2017/01/06/css3/" data-title="利用css3进行3d旋转" data-url="https://haojiawei3.github.io/emblog/emblog/2017/01/06/css3/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'hjwblog1'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>

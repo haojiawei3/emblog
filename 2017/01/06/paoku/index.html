@@ -7,13 +7,18 @@
 
     
 
-    <title>HTML5 | </title>
+    <title>利用canvas实现跑酷游戏雏形 | </title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="相关介绍
+这个游戏主要还是归功于h5给我们提供了canvas功能，可以让我们队每一个像素进行操作
+比起SVG来说，canvas主要是对于位图的操作，更加灵活
+现在只是接触到一些2d图形，还需多加学习">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="利用canvas实现跑酷游戏雏形"/>
     <meta property="og:site_name" content="Hexo"/>
 
     
@@ -199,36 +204,121 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/emblog/categories/canvas/">canvas</a>
+
 
         
-            <a class="breadcrumb" href="/tags/HTML5/">HTML5</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>利用canvas实现跑酷游戏雏形</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2017-01-06T02:25:51.000Z"><a href="/emblog/2017/01/06/paoku/">2017-01-06</a></time>
+
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/emblog/2017/01/06/house/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-01-06T02:21:23.000Z">2017-01-06</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                利用css3实现的3d房子模型
-            </a>
+            <a href="/emblog/tags/canvas/" class="chip pink lighten-1">canvas</a>
         
-            <a href="/emblog/2017/01/05/canvas/" class="collection-item grey-text text-darken-1">
-                <time datetime="2017-01-05T15:09:42.000Z">2017-01-05</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                canvas
-            </a>
+            <a href="/emblog/tags/面向对象/" class="chip pink lighten-1">面向对象</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#相关介绍"><span class="section table-of-contents-text">相关介绍</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#用到的碰撞函数"><span class="section table-of-contents-text">用到的碰撞函数</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#demo地址"><span class="section table-of-contents-text">demo地址</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <img src="/emblog/img/paoku.png" class="[ddd]" title="[] [title text [alt text]]">
+<h2 id="相关介绍"><a href="#相关介绍" class="headerlink" title="相关介绍"></a><b>相关介绍</b></h2><ul>
+<li>这个游戏主要还是归功于h5给我们提供了canvas功能，可以让我们队每一个像素进行操作</li>
+<li>比起SVG来说，canvas主要是对于位图的操作，更加灵活</li>
+<li>现在只是接触到一些2d图形，还需多加学习<a id="more"></a>
+</li>
+</ul>
+<h2 id="用到的碰撞函数"><a href="#用到的碰撞函数" class="headerlink" title="用到的碰撞函数"></a>用到的碰撞函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">/*canvas  画布对象</div><div class="line">* cobj    2d对象</div><div class="line">* obj1    物体A</div><div class="line">* obj2    物体B</div><div class="line">*</div><div class="line">* 物体属性   x  y   width height</div><div class="line">* 物体方法   draw()</div><div class="line">* */</div><div class="line"><span class="keyword">function</span> hitPix(canvas,cobj,obj1,obj2)&#123;</div><div class="line">    <span class="keyword">if</span>(obj1.x+obj1.width&lt;obj2.x||obj2.x+obj2.width&lt;obj1.x||obj1.y+obj1.height&lt;obj2.y||obj2.y+obj2.height&lt;obj1.y)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    var minx=obj1.x&lt;obj2.x?obj1.x:obj2.x;</div><div class="line">    var maxx=obj1.x+obj1.width&gt;obj2.x+obj2.width?obj1.x+obj1.width:obj2.x+obj2.width;</div><div class="line">    var miny=obj1.y&lt;obj2.y?obj1.y:obj2.y;</div><div class="line">    var maxy=obj1.y+obj1.height&gt;obj2.y+obj2.height?obj1.y+obj1.height:obj2.y+obj2.height;</div><div class="line">    cobj.clearRect(minx,miny,maxx-minx,maxy-miny);</div><div class="line">    obj1.draw();</div><div class="line">    var data1=cobj.getImageData(minx,miny,maxx-minx,maxy-miny);</div><div class="line">    cobj.clearRect(minx,miny,maxx-minx,maxy-miny);</div><div class="line">    obj2.draw();</div><div class="line">    var data2=cobj.getImageData(minx,miny,maxx-minx,maxy-miny);</div><div class="line">    obj1.draw();</div><div class="line">    var length=data1.data.length;</div><div class="line">    <span class="keyword">for</span>(var i=3;i&lt;length;i+=4)&#123;</div><div class="line">        <span class="keyword">if</span>(data1.data[i]&gt;0&amp;&amp;data2.data[i]&gt;0)&#123;</div><div class="line">            <span class="built_in">return</span> <span class="literal">true</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h2><p><a href="https://haojiawei1.github.io/shopapp/%E8%B7%91%E9%85%B7/ttkp.html" target="_blank" rel="external">点击查看</a></p>
+
+                
+<p class="pink-link-context">
+    <a href="/emblog/2017/01/06/css3/" rel="next" title="利用css3进行3d旋转">
+    上一篇：利用css3进行3d旋转
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/emblog/2017/01/06/house/" rel="next" title="利用css3实现的3d房子模型">
+    下一篇：利用css3实现的3d房子模型
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2017/01/06/paoku/" data-title="利用canvas实现跑酷游戏雏形" data-url="https://haojiawei3.github.io/emblog/emblog/2017/01/06/paoku/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'hjwblog1'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
