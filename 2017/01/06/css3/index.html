@@ -159,7 +159,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/emblog/categories/html5/">
-                    html5 <span class="right">1 篇</span></a>
+                    html5 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -265,6 +265,12 @@
 <h2 id="部分动画函数"><a href="#部分动画函数" class="headerlink" title="部分动画函数"></a>部分动画函数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       <span class="keyword">for</span>(var a=0;a&lt;arr.length;a++)&#123;</div><div class="line">           <span class="keyword">if</span>(a&lt;5)&#123;</div><div class="line">               arr[a].style.animation=<span class="string">"one "</span>+a*0.8+<span class="string">"s ease"</span></div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               arr[a].style.animation=<span class="string">"one "</span>+(8<span class="_">-a</span>*0.8)+<span class="string">"s ease"</span></div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;,300);</div><div class="line"></div><div class="line">   //    执行动画</div><div class="line">   var init=0;</div><div class="line">   var t=<span class="built_in">set</span>Interval(move,5000);</div><div class="line">   <span class="keyword">function</span> <span class="function"><span class="title">move</span></span>()&#123;</div><div class="line">       init+=90;</div><div class="line">       <span class="keyword">for</span>(var i=0; i&lt;arr.length;i++)&#123;</div><div class="line">           arr[i].style.transform=<span class="string">"rotateY("</span>+init+<span class="string">"deg)"</span></div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   $(window).focus(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       t=<span class="built_in">set</span>Interval(move,5000);</div><div class="line">   &#125;);</div><div class="line">   $(window).blur(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       clearInterval(t);</div><div class="line">   &#125;)</div></pre></td></tr></table></figure>
 
                 
+<p class="pink-link-context">
+    <a href="/emblog/2017/01/06/canva1/" rel="next" title="canvas">
+    上一篇：canvas
+  </a>
+</p>
+
 
 
 <p class="pink-link-context">

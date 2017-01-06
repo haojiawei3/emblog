@@ -7,13 +7,20 @@
 
     
 
-    <title>归档：2017/1 | </title>
+    <title>canvas | </title>
     <meta name="author" content="John Doe">
+    
+    <meta name="description" content="相关介绍
+HTML5 Canvas 还有一个比较实用的应用，那就是网络画板，这样我们就可以在网页上直接进行画图操作。今天要分享的这款HTML5 Canvas画图工具就可以简单实现网络画图的功能，我们可以自定义笔刷的类型、粗细、颜色，也可以定义画布的大小和背景颜色等。我们也可以对这款HTML5画图工具进行扩展，让它的画图功能更加完善。
+
+包含有裁剪，橡皮，以及图片处理的功能，高斯模糊集马赛克
+
+更多功能还需大牛去继续开发，这只是一个简单demo">
     
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="canvas"/>
     <meta property="og:site_name" content="Hexo"/>
 
     
@@ -199,64 +206,121 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/emblog/categories/html5/">html5</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>canvas</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="pink-link-context" datetime="2017-01-06T03:58:45.000Z"><a href="/emblog/2017/01/06/canva1/">2017-01-06</a></time>
+
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
+            <a href="/emblog/tags/html5/" class="chip pink lighten-1">html5</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2017
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/emblog/2017/01/06/canva1/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-01-06T03:58:45.000Z">2017-01-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                canvas
-                            </a>
-                        
-                            <a href="/emblog/2017/01/06/css3/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-01-06T02:43:07.000Z">2017-01-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                利用css3进行3d旋转
-                            </a>
-                        
-                            <a href="/emblog/2017/01/06/paoku/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-01-06T02:25:51.000Z">2017-01-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                利用canvas实现跑酷游戏雏形
-                            </a>
-                        
-                            <a href="/emblog/2017/01/06/house/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-01-06T02:21:23.000Z">2017-01-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                利用css3实现的3d房子模型
-                            </a>
-                        
-                            <a href="/emblog/2017/01/05/canvas11/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2017-01-05T15:09:42.000Z">2017-01-05</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                canvas
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/emblog/tags/css3/" class="chip pink lighten-1">css3</a>
         
-    </ul>
+            <a href="/emblog/tags/js/" class="chip pink lighten-1">js</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#相关介绍"><span class="section table-of-contents-text">相关介绍</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#部分源码"><span class="section table-of-contents-text">部分源码</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#demo地址"><span class="section table-of-contents-text">demo地址</span></a></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <img src="/emblog/img/canvas.png" class="[ddd]" title="[100] [title text [alt text]]">
+<!--top-->
+<h2 id="相关介绍"><a href="#相关介绍" class="headerlink" title="相关介绍"></a><b>相关介绍</b></h2><ul>
+<li><p><code>HTML5 Canvas</code> 还有一个比较实用的应用，那就是网络画板，这样我们就可以在网页上直接进行画图操作。今天要分享的这款HTML5 Canvas画图工具就可以简单实现网络画图的功能，我们可以自定义笔刷的类型、粗细、颜色，也可以定义画布的大小和背景颜色等。我们也可以对这款HTML5画图工具进行扩展，让它的画图功能更加完善。</p>
+</li>
+<li><p>包含有裁剪，橡皮，以及图片处理的功能，高斯模糊集马赛克</p>
+</li>
+<li><p>更多功能还需大牛去继续开发，这只是一个简单demo</p>
+</li>
+</ul>
+<a id="more"></a>
+<h2 id="部分源码"><a href="#部分源码" class="headerlink" title="部分源码"></a>部分源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">draw:<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">       var that=this;</div><div class="line">       this.copy.onmousedown=<span class="keyword">function</span>(e)&#123;</div><div class="line">           var startx= e.offsetX;</div><div class="line">           var starty= e.offsetY;</div><div class="line">           that.copy.onmousemove=<span class="keyword">function</span>(e)&#123;</div><div class="line">               that.isback=<span class="literal">true</span>;</div><div class="line">               that.init();</div><div class="line">               var endx= e.offsetX;</div><div class="line">               var endy= e.offsetY;</div><div class="line">               that.cobj.clearRect(0,0,that.width,that.height);</div><div class="line">               <span class="keyword">if</span>(that.historys.length&gt;0)&#123;</div><div class="line">                   that.cobj.putImageData(that.historys[that.historys.length-1],0,0);</div><div class="line">               &#125;</div><div class="line">               that.cobj.beginPath();</div><div class="line">               that[that.type](startx,starty,endx,endy);</div><div class="line"></div><div class="line">           &#125;</div><div class="line">            line:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   var that=this;</div><div class="line">                   that.cobj.beginPath();</div><div class="line">                   that.cobj.moveTo(x,y);</div><div class="line">                   that.cobj.lineTo(x1,y1);</div><div class="line">                   that.cobj.stroke();</div><div class="line">               &#125;,</div><div class="line">               rect:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   var that=this;</div><div class="line">                   that.cobj.beginPath();</div><div class="line">                   that.cobj.rect(x,y,x1-x,y1-y)</div><div class="line">                   that.cobj[that.style]();</div><div class="line">               &#125;,</div><div class="line">               arc:<span class="keyword">function</span>(x,y,x1,y1)&#123;</div><div class="line">                   this.cobj.beginPath();</div><div class="line">                   var r=Math.sqrt((x1-x)*(x1-x)+(y1-y)*(y1-y));</div><div class="line">                   this.cobj.arc(x,y,r,0,2*Math.PI);</div><div class="line">                   this.cobj[this.style]();</div><div class="line">               &#125;,</div></pre></td></tr></table></figure>
+<h2 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h2><p><a href="https://haojiawei1.github.io/shopapp/ps/ps.html" target="_blank" rel="external">点击查看</a></p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/emblog/2017/01/06/css3/" rel="next" title="利用css3进行3d旋转">
+    下一篇：利用css3进行3d旋转
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2017/01/06/canva1/" data-title="canvas" data-url="https://haojiawei3.github.io/emblog/emblog/2017/01/06/canva1/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'hjwblog1'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
