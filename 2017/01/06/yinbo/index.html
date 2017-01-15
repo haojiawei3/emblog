@@ -160,16 +160,32 @@ createAnalyser创建一个音频源分析器，再通过canvas让其显示在画
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/emblog/categories/css3/">
-                    css3 <span class="right">2 篇</span></a>
+                <a class="no-padding" href="/emblog/categories/html5/">
+                    html5 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/emblog/categories/html5/">
-                    html5 <span class="right">2 篇</span></a>
+                <a class="no-padding" href="/emblog/categories/markdown/">
+                    markdown <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/emblog/categories/hexo/">
+                    hexo <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/emblog/categories/css3/">
+                    css3 <span class="right">2 篇</span></a>
                 </a>
             </li>
 
@@ -267,10 +283,16 @@ createAnalyser创建一个音频源分析器，再通过canvas让其显示在画
 </li>
 </ul>
 <a id="more"></a>
-<h2 id="部分源码"><a href="#部分源码" class="headerlink" title="部分源码"></a>部分源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">  var sources=audioObj.createMediaElementSource(audio);</div><div class="line">//        音频源</div><div class="line">//        分析器</div><div class="line">        var analyser=audioObj.createAnalyser();</div><div class="line">//        音频源-&gt;分析器-&gt;设备当中；</div><div class="line">        sources.connect(analyser);</div><div class="line">        analyser.connect(audioObj.destination);</div><div class="line">        <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            cobj.clearRect(0,0,300,150)</div><div class="line">            var array=new Uint8Array(analyser.frequencyB<span class="keyword">in</span>Count);</div><div class="line">            analyser.getByteFrequencyData(array);</div><div class="line">            var bili=array.length/canvas.width;</div><div class="line">            cobj.save();</div><div class="line">            cobj.translate(0,150);</div><div class="line">            cobj.beginPath();</div><div class="line">            <span class="keyword">for</span>(var i=0;i&lt;array.length;i++)&#123;</div><div class="line">                cobj.lineTo(i,-array[i]);</div><div class="line">            &#125;</div><div class="line">            cobj.stroke();</div><div class="line">            cobj.restore();</div><div class="line">        &#125;,50)</div><div class="line"></div><div class="line">        var progress=document.querySelector(<span class="string">".progress"</span>);</div><div class="line">        <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">//            音频的总长度</div><div class="line">            var audiowidth=audio.duration;</div><div class="line">//            音频的播放长度</div><div class="line">            var audioW=audio.currentTime;</div><div class="line">            bili=audioW/audiowidth*100+<span class="string">"%"</span>;</div><div class="line">            progress.style.width=bili;</div><div class="line">        &#125;,1000)</div><div class="line">        var play=document.getElementsByTagName(<span class="string">"input"</span>)[0];</div><div class="line">        var pause=document.getElementsByTagName(<span class="string">"input"</span>)[1];</div><div class="line">        play.onclick=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            audio.play();</div><div class="line">        &#125;</div><div class="line">        pause.onclick=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            audio.pause();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h2 id="部分源码"><a href="#部分源码" class="headerlink" title="部分源码"></a>部分源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">  var sources=audioObj.createMediaElementSource(audio);    </div><div class="line">        var analyser=audioObj.createAnalyser();</div><div class="line">        sources.connect(analyser);</div><div class="line">        analyser.connect(audioObj.destination);</div><div class="line">        <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            cobj.clearRect(0,0,300,150)</div><div class="line">            var array=new Uint8Array(analyser.frequencyB<span class="keyword">in</span>Count);</div><div class="line">            analyser.getByteFrequencyData(array);</div><div class="line">            var bili=array.length/canvas.width;</div><div class="line">            cobj.save();</div><div class="line">            cobj.translate(0,150);</div><div class="line">            cobj.beginPath();</div><div class="line">            <span class="keyword">for</span>(var i=0;i&lt;array.length;i++)&#123;</div><div class="line">                cobj.lineTo(i,-array[i]);</div><div class="line">            &#125;</div><div class="line">            cobj.stroke();</div><div class="line">            cobj.restore();</div><div class="line">        &#125;,50)</div><div class="line"></div><div class="line">        var progress=document.querySelector(<span class="string">".progress"</span>);</div><div class="line">        <span class="built_in">set</span>Interval(<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">//            音频的总长度</div><div class="line">            var audiowidth=audio.duration;</div><div class="line">//            音频的播放长度</div><div class="line">            var audioW=audio.currentTime;</div><div class="line">            bili=audioW/audiowidth*100+<span class="string">"%"</span>;</div><div class="line">            progress.style.width=bili;</div><div class="line">        &#125;,1000)</div><div class="line">        var play=document.getElementsByTagName(<span class="string">"input"</span>)[0];</div><div class="line">        var pause=document.getElementsByTagName(<span class="string">"input"</span>)[1];</div><div class="line">        play.onclick=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            audio.play();</div><div class="line">        &#125;</div><div class="line">        pause.onclick=<span class="function"><span class="title">function</span></span>()&#123;</div><div class="line">            audio.pause();</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
 <h2 id="demo地址"><a href="#demo地址" class="headerlink" title="demo地址"></a>demo地址</h2><p><a href="https://haojiawei1.github.io/hjsblog/%E9%9F%B3%E8%A7%86%E9%A2%91/video.html" target="_blank" rel="external">点击查看</a></p>
 
                 
+<p class="pink-link-context">
+    <a href="../../13/canvas2/" rel="next" title="利用Github Pages + Hexo搭建个人博客">
+    上一篇：利用Github Pages + Hexo搭建个人博客
+  </a>
+</p>
+
 
 
 <p class="pink-link-context">
@@ -384,7 +406,7 @@ createAnalyser创建一个音频源分析器，再通过canvas让其显示在画
             © 2016 example.com, All rights reserved.
             <p class="right" style="margin-top: 0;">
 <span id="busuanzi_container_site_uv" style="display: none;">
-您好，您是本站点的第 <span id="busuanzi_value_site_uv" style="color: yellow;"></span> 位访客，祝您生活工作愉快
+您好，您是本站点的第 <span id="busuanzi_value_site_uv" style="color: yellow;">43</span> 位访客，祝您生活工作愉快
 </span></p>
         </div>
     </div>
